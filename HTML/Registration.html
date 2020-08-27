@@ -1,0 +1,219 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="..\CSS\Common_CSS_1.css">
+<script>
+function val()
+{
+	var fname=registration.firstname;
+	var lname=registration.lastname;
+	var num=registration.contact;
+	var pwd1=registration.password1;
+	var pwd2=registration.password2;
+		if(fname.value=="" || fname.value==null)
+		{
+			alert("Name must be filled");
+			fname.focus();
+			return false;
+		}
+		if(lname.value=="" || lname.value==null)
+		{
+			alert("Please enter the name correctly");
+			lname.focus();
+			return false;
+		}
+		if (num.value == "") 
+		{
+  		alert("Please enter a valid number");
+		num.focus();
+		return false;
+ 		}
+ 		if (isNaN(num.value)) 
+		{
+  		alert("Please enter a valid number");
+		num.focus();
+		return false;
+		}
+		if(pwd1.value=="")
+		{
+			alert("password field can'b be empty");
+			pwd1.focus();
+			return false;
+		}
+		if((pwd1.value)!=(pwd2.value))
+
+		{
+			alert("Passwords must match!");
+			pwd1.focus();
+			return false;
+		}
+		var photo=document.registration.photo.value;
+		if(photo=="" || photo==null)
+		{
+			alert("Please upload a photo");
+			fname.focus();
+			return false;
+		}
+
+}
+</script>
+<script>
+function fname()
+{
+	var fname=document.registration.firstname.value;
+		if(fname=="" || fname==null)
+		{
+			alert("Name must be filled");
+			fname.focus();
+			return false;
+
+		}
+}
+</script>
+<script>
+funtion lname()
+{
+	var lname=document.registration.lastname.value;
+		if(lname=="" || lname==null)
+		{
+			alert("Please enter the name correctly");
+			lname.focus();
+			return false;
+		}
+}
+<script>
+function mail() 
+{
+    	var x = document.registration.email.value;
+    	var atpos = x.indexOf("@");
+    	var dotpos = x.lastIndexOf(".");
+    	if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) 
+	{
+        	alert("Not a valid e-mail address");
+	email.focus();
+        	return false;
+    	}
+	else if(lname=="" || lname==null)
+	{
+		alert("Please enter the your E-mail ID correctly");
+		email.focus();
+		return false;
+	}
+}
+</script>
+<script>
+function num()
+{
+	var num=document.registration.contact.value;
+		if (num == "") 
+		{
+  		alert("Please enter a valid number");
+		num.focus();
+		return false;
+ 		}
+ 		if (isNaN(num)) 
+		{
+  		alert("Please enter a valid number");
+		num.focus();
+		return false;
+		}
+}
+</script>
+</head>
+<body onunload="confirm("Are you sure you want to leave the site?");">
+<h3>Register here to get more information...</h3>
+<form name="registration" method="post" action="default1.html" onSubmit="return val()">
+<table>
+	<tr>
+	<td><p>First Name
+	<td><input type="text" name="firstname" onblur="fname()"><br><br>
+	</tr>
+	<tr>
+	<td><p>Last Name 
+	<td><input type="text" name="lastname" onblur="fname()"><br><br>
+	</tr>
+	<tr>
+
+	<td><p>Gender
+	<td>
+	<input type="radio" name="gender">Male    
+	<input type="radio" name="gender" checked="checked">Female <br><br>
+	</tr>
+	<tr>
+		<td><p>Date of birth:
+		<td>Date:
+			<select name="dd">
+					<script type="text/javascript">
+					var i;
+					for(i=1;i<=31;i++)
+					{	
+					document.write("<option value=“+i+”>"+i);
+					}
+					</script>
+
+			</select>
+
+			Month:
+			<select name="mm">
+					<script type="text/javascript">
+					var i;
+					for(i=1;i<=12;i++)
+					{	
+					document.write("<option value=“+i+”>"+i);
+					}
+					</script>
+			</select>
+
+			Year:
+			<select name="yy">
+					<script type="text/javascript">
+					var i;
+					for(i=1980;i<=2014;i++)
+					{	
+					document.write("<option value=“+i+”>"+i);
+					}
+					</script>
+
+			</select>
+
+	<br><br>
+	</tr>
+	<tr>
+	<td><p>Email address 
+	<td><input type="text" name="email" onblur="mail()"><br><br>
+	</tr>
+	<tr>
+	<td><p>Contact no:
+	<td><input type="text" name="contact" onblur="num()" maxlength="10"><br><br>
+
+	</tr>
+	<tr>
+	<td><p>Password
+	<td><input type="password" name="password1">
+	</tr>
+	<tr>
+	<td><p>Re-Enter Password 
+	<td><input type="password" name="password2"><br><br>
+	</tr>
+	<tr>
+
+	<td><p>Country
+	<td><select name="country">
+	<option value="In">India
+	<option value="af">Africa
+	<option value="au">Australia
+	<option value="uk">United Kingdom
+	</select><br><br>
+	</tr>
+	<tr>
+	<td><p>Upload a passport size picture
+	<td><input type="file" name="photo"><br><br>
+	</tr>
+
+</table>
+<input type="reset">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="Submit" value="Submit" name="submit">
+</form>
+</tr>
+</table>
+</body>
+</html>

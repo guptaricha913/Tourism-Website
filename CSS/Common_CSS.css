@@ -1,0 +1,57 @@
+h1,h2,h3,h4,h5,h6
+{
+	font-family:Times New Roman;
+	text-decoration:underline;
+	font-style:italic;
+	font-style:bold;
+	font-size:32;
+	color:white;
+	text-align:center;
+	border-style:solid;
+	border-color:white;
+	border-width:10px;
+}
+p
+{
+	font-style:Bold;
+	color:#006600;
+}
+font
+{
+	font-style:bold;
+	font-style:italic;
+	color:white;
+	font-size:50;
+	font-family:Times New Roman;	
+	text-decoration:underline;	
+}
+a:link
+{
+text-decoration:none;
+color:white;
+}
+a:visited
+{
+text-decoration:none;
+color:white
+}
+a:active
+{
+text-decoration:none;
+color:white
+}
+hr
+{
+	color:white;
+}
+body
+{
+	color:white;
+	background:url('2.jpg');
+}
+a:hover
+{
+	color:#9933FF;
+	font-style:bold;
+	font-size:28;
+}
